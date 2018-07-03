@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('home', function () {
+    return view('home');
+});
+
+Route::get('clients', function () {
+    return view('clients');
+});
+
+Route::get('login', function () {
+    return view('login');
+});
+
+Route::get('contact', function () {
+    return view('contact');
+});
