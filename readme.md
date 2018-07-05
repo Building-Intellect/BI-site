@@ -55,22 +55,23 @@
 
   ```sudo nano /opt/lampp/etc/httpd.conf```
 
-  find 'Include etc/extra/httpd-vhosts.conf' line and uncomment it, then save.
+  Find 'Include etc/extra/httpd-vhosts.conf' line and uncomment it, then save.
 
   ```sudo nano /opt/lampp/etc/extra/httpd-vhosts.conf```
 
-  replace dummy configuration with the following code and save:
+  Replace dummy configuration with the following code and save:
+  ```
+  <VirtualHost *:80>
+      DocumentRoot "/opt/lampp/htdocs/"
+      ServerName localhost
+  </VirtualHost>
+  <VirtualHost *:80>
+      DocumentRoot "/opt/lampp/htdocs/BI-site/public"
+      ServerName bi-site.local
+  </VirtualHost>
+  ```
 
-    <VirtualHost *:80>
-        DocumentRoot "/opt/lampp/htdocs/"
-        ServerName localhost
-    </VirtualHost>
-    <VirtualHost *:80>
-        DocumentRoot "/opt/lampp/htdocs/BI-site/public"
-        ServerName bi-site.local
-    </VirtualHost>
-
-  - Make changes to /etc/hosts
+- Make changes to /etc/hosts
 
   ```sudo nano /etc/hosts```
 
@@ -78,13 +79,13 @@
 
   ```127.0.0.1       bi-site.local```
 
-  - Modify permissions for BI-site
+- Modify permissions for BI-site
 
   ```sudo chmod -R 777 /opt/lampp/htdocs/BI-site/storage```
 
   ```sudo chmod -R 777 /opt/lampp/htdocs/BI-site/bootstrap/cache```
 
-  - Restart all from xampp manager
+- Restart all from xampp manager
 
   Visit http://bi-site.local in browser and PRESTO!
 
