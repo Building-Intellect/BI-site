@@ -9,7 +9,7 @@
 
 ## Setup BI-site for development (Ubuntu)
 
-- Install xampp for bi-site from https://www.apachefriends.org/index.html:
+- **Install xampp for bi-site from https://www.apachefriends.org/index.html:**
 
 
   ```chmod 755 xampp-linux-*-installer.run```
@@ -31,7 +31,7 @@
 
   ```sudo apt-get update```
 
-- setup composer for php and clone BI-site into xampp server:
+- **Setup composer for php and clone BI-site into xampp server:**
 
 
   ```sudo apt-get install curl php-cli php-mbstring git unzip```
@@ -46,7 +46,7 @@
 
   ```git clone https://github.com/Building-Intellect/BI-site.git```
 
-- Finish setting up BI-site and configure virtual hosts:
+- **Finish setting up BI-site and configure virtual hosts:**
 
 
   ```sudo apt-get install php-xml```
@@ -71,7 +71,7 @@
   </VirtualHost>
   ```
 
-- Make changes to /etc/hosts
+- **Make changes to /etc/hosts**
 
   ```sudo nano /etc/hosts```
 
@@ -79,13 +79,13 @@
 
   ```127.0.0.1       bi-site.local```
 
-- Modify permissions for BI-site
+- **Modify permissions for BI-site**
 
   ```sudo chmod -R 777 /opt/lampp/htdocs/BI-site/storage```
 
   ```sudo chmod -R 777 /opt/lampp/htdocs/BI-site/bootstrap/cache```
 
-- Restart all from xampp manager
+- **Restart all from xampp manager**
 
   Visit http://bi-site.local in browser and PRESTO!
 
