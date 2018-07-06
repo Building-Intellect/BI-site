@@ -10,28 +10,38 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Style -->
-        <link href="/css/bi-style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="links" id="bi-nav">
+            <a href="/">Home</a>
+            <a id="bi-nav-active">Clients</a>
+            <a href="/login">Login</a>
             @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
+                @auth
+                    <a href="{{ url('/home') }}">Home</a>
+                @else
+                    <a href="{{ route('register') }}">Register</a>
+                @endauth
             @endif
-
+            <a href="/contact">Contact</a>
+        </div>
+        <div class="flex-center position-ref full-height">
             <div class="content">
-                <div class="title m-b-md">Clients</div>
-                <div class="links">
-                    <a href="/">Home</a>
-                    <a href="/clients">Clients</a>
-                    <a href="/login">Login</a>
-                    <a href="/contact">Contact</a>
+                <div class="title">Clients</div>
+                <div>
+                    @foreach($clients as $client)
+                        <div class="bi-client">
+                            <h2>{{ $client->ClientName }}</h2>
+                            <ul>
+                                <li>{{ $client->URL }}</li>
+                                <li>{{ $client->City }}</li>
+                                <li>{{ $client->State }}</li>
+                            </ul>
+                            <p>{{ $client->Description }}</p>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

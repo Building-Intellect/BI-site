@@ -13,17 +13,22 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
-Route::get('clients', function () {
-    $client = App\Client::first();
-    echo $client->ClientName;
-});
-
-Route::get('login', function () {
-    return view('login');
-});
+Route::get('clients', 'ClientController@getClients');
 
 Route::get('contact', function () {
     return view('contact');
 });
+
+Route::get('login', function () {
+    return view('auth.login');
+});
+
+Route::get('/register', 'RegistrationController@create');
+
+Route::post('/register', 'RegistrationController@store');
+
+Route::get('/login', 'SessionsController@create');
+
+Auth::routes();

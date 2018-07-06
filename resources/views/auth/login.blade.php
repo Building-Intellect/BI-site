@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Building Intellect</title>
+        <title>Login</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -15,9 +15,9 @@
     </head>
     <body>
         <div class="links" id="bi-nav">
-            <a id="bi-nav-active">Home</a>
+            <a href="/">Home</a>
             <a href="/clients">Clients</a>
-            <a href="/login">Login</a>
+            <a id="bi-nav-active">Login</a>
             @if (Route::has('login'))
                 @auth
                     <a href="{{ url('/home') }}">Home</a>
@@ -29,7 +29,7 @@
         </div>
         <div class="flex-center position-ref full-height">
             <div class="content">
-                <div class="title m-b-md">Building Intellect</div>
+                <div class="title m-b-md">Login</div>
             </div>
         </div>
     </body>
