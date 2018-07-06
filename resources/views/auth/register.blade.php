@@ -1,66 +1,77 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Register</title>
+@extends('layouts.app')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+@section('content')
+<div class="container content">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header title">{{ __('Register') }}</div>
 
-        <!-- Style -->
-        <link href="/css/style.css" rel="stylesheet">
-        <link href="/css/app.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="links" id="bi-nav">
-            <a href="/">Home</a>
-            <a href="/clients">Clients</a>
-            <a href="/login">Login</a>
-            @if (Route::has('login'))
-                @auth
-                    <a href="{{ url('/home') }}">Home</a>
-                @else
-                    <a id="bi-nav-active" href="{{ route('register') }}">Register</a>
-                @endauth
-            @endif
-            <a href="/contact">Contact</a>
-        </div>
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">Register</div>
-                <form method="POST" action="/register">
-                    {{ csrf_field() }}
-                    <div class="form-group">
-                        <label for="name">Username:</label>
-                        <input type="text" class="form-control" id="username" name="username">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">First Name:</label>
-                        <input type="text" class="form-control" id="firstname" name="firstname">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Last Name:</label>
-                        <input type="text" class="form-control" id="lastname" name="lastname">
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Phone Number:</label>
-                        <input type="text" class="form-control" id="phonenumber" name="phonenumber">
-                    </div>
-                    <div class="form-group">
-                        <label for="emailaddress">Email:</label>
-                        <input type="email" class="form-control" id="emailaddress" name="emailaddress">
-                    </div>
-                    <div class="form-group">
-                        <label for="userpassword">Password:</label>
-                        <input type="password" class="form-control" id="userpassword" name="userpassword">
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn ntn-primary">Submit</button>
-                    </div>
-                </form>
+                <div class="card-body">
+                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+                        @csrf
+
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Register') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+@endsection

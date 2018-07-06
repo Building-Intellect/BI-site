@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return view('welcome');
+});
 
 Route::get('clients', 'ClientController@getClients');
 
@@ -21,14 +21,7 @@ Route::get('contact', function () {
     return view('contact');
 });
 
-Route::get('login', function () {
-    return view('auth.login');
-});
-
-Route::get('/register', 'RegistrationController@create');
-
-Route::post('/register', 'RegistrationController@store');
-
-Route::get('/login', 'SessionsController@create');
-
 Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
