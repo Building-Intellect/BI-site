@@ -33,7 +33,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" id="bi-nav-link" href="/">Home</a>
+                            <a class="nav-link" id="bi-nav-link" href="/">Welcome</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="bi-nav-link" href="/clients">Clients</a>
@@ -41,6 +41,16 @@
                         <li class="nav-item">
                             <a class="nav-link" id="bi-nav-link" href="/contact">Contact</a>
                         </li>
+                        @if (Auth::check())
+                            <li class="nav-item">
+                                <a class="nav-link" id="bi-nav-link" href="/home">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="bi-nav-link" href="/ticketing">Ticketing</a>
+                            </li>
+                        @else
+                            //show logged out navbar
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->

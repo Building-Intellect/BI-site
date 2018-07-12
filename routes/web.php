@@ -25,3 +25,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('ticketing', function () {
+    return view('ticketing');
+});

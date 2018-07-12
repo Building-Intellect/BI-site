@@ -44,6 +44,7 @@ body {
 }
 
 #bi-nav-link {
+    padding: 10px;
     color: #636b6f;
     font-weight: 600;
     letter-spacing: .1rem;
