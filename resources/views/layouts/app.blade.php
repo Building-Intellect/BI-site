@@ -8,10 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Building Intellect</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <title>@yield('page') - {{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -30,6 +27,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
@@ -46,10 +44,8 @@
                                 <a class="nav-link" id="bi-nav-link" href="/home">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="bi-nav-link" href="/ticketing">Ticketing</a>
+                                <a class="nav-link" id="bi-nav-link" href="/tickets">Ticketing</a>
                             </li>
-                        @else
-                            //show logged out navbar
                         @endif
                     </ul>
 
@@ -88,9 +84,15 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 content">
             @yield('content')
         </main>
     </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script src="{{ asset('js/jquery.min.js') }}" defer></script>-->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    @yield('footer')
 </body>
 </html>
