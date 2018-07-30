@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,6 +25,12 @@ Route::get('contact', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/email', function() {
+	Mail::send('emailtest', ['name' => 'TestParam'], function($message) {
+		$message->to('chikn42@gmail.com', 'Building Intellect')->subject('Welcome!');
+	});
+});
 
 //Clear Cache facade value:
 Route::get('/clear-cache', function() {
