@@ -67,3 +67,7 @@ body {
     list-style-type: none;
     padding: 0px;
 }
+
+thead {
+    font-weight: bold;
+}

@@ -32,26 +32,11 @@ Route::get('/email', function() {
 	});
 });
 
-//Clear Cache facade value:
+//Clear all cache values:
 Route::get('/clear-cache', function() {
-    $exitCode = Artisan::call('cache:clear');
-    return '<h1>Cache facade value cleared</h1>';
-});
-
-//Clear Route cache:
-Route::get('/route-clear', function() {
-    $exitCode = Artisan::call('route:clear');
-    return '<h1>Route cache cleared</h1>';
-});
-
-//Clear View cache:
-Route::get('/view-clear', function() {
-    $exitCode = Artisan::call('view:clear');
-    return '<h1>View cache cleared</h1>';
-});
-
-//Clear Config cache:
-Route::get('/config-cache', function() {
-    $exitCode = Artisan::call('config:cache');
-    return '<h1>Clear Config cleared</h1>';
+    $exitCode1 = Artisan::call('cache:clear');
+    $exitCode2 = Artisan::call('route:clear');
+    $exitCode3 = Artisan::call('view:clear');
+    $exitCode4 = Artisan::call('config:cache');
+    return '<h1>Facade, Routes, Views, and Config cache values cleared</h1>';
 });
