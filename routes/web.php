@@ -18,22 +18,23 @@ Route::get('/', function () {
 
 Route::get('clients', 'ClientController@getClients');
 
-Route::get('contact', function () {
-    return view('contact');
-});
+Route::get('contact', 'ContactController@create');
+
+Route::post('contact', 'ContactController@send');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 
-Route::get('/email', function() {
-	Mail::send('emailtest', ['name' => 'TestParam'], function($message) {
-		$message->to('chikn42@gmail.com', 'Building Intellect')->subject('Building Intellect Contact');
+Route::get('email', function() {
+	Mail::send('email.test', ['name' => 'TestParam'], function($message) {
+        $message->from('noreply@buildingintellect.com');
+		$message->to('chikn42@gmail.com', 'Building Intellect')->subject('Site Contact: ');
 	});
 });
 
 //Clear all cache values:
-Route::get('/clear-cache', function() {
+Route::get('clear-cache', function() {
     $exitCode1 = Artisan::call('cache:clear');
     $exitCode2 = Artisan::call('route:clear');
     $exitCode3 = Artisan::call('view:clear');
