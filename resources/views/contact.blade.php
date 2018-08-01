@@ -13,6 +13,35 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    Business Inquiries Only.
+                    <div class="contact">
+                        <form role="form " action="" method="">
+                            <div class="form-group">
+                                <label for="name"></label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" required>
+                                <!--placing icon using a span element-->
+                                <span class="icon fa fa-user fa-lg"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"></label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                                <span class="icon fa fa-envelope fa-lg"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="sub"></label>
+                                <input type="text" class="form-control" id="sub" name="sub" placeholder="Subject" required>
+                                <span class="icon fa fa-pencil fa-lg"></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="5" cols="30" id="msg" name="msg" placeholder="Message"></textarea>
+                                <span class="icon-textarea fa fa-paper-plane fa-lg "></span>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
                 </div>
             </div>
         </div>

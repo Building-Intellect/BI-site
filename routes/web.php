@@ -28,7 +28,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/email', function() {
 	Mail::send('emailtest', ['name' => 'TestParam'], function($message) {
-		$message->to('chikn42@gmail.com', 'Building Intellect')->subject('Welcome!');
+		$message->to('chikn42@gmail.com', 'Building Intellect')->subject('Building Intellect Contact');
 	});
 });
 

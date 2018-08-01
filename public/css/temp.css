@@ -1,3 +1,5 @@
+/* Site styles */
+
 body {
     background-color: #fff;
     color: #636b6f;
@@ -70,4 +72,71 @@ body {
 
 thead, .card-header {
     font-weight: bold;
+}
+
+/* Welcome page styles */
+
+#welcome-bldg-icon {
+    font-size: 64px;
+    color: Dodgerblue;
+}
+
+/* Contact page styles */
+
+.contact form {
+    padding-top: 20px;
+}
+
+.contact label {
+    display: none;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding-left: 40px;
+    border-color: transparent;
+    color: gray;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+}
+
+.contact input::placeholder, .contact textarea::placeholder {
+  color: gray;
+}
+
+.contact .btn-default {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding: 15px 36px;
+  background-color: #adaeae;
+  border-radius: 3px;
+  border: 0px;
+  color: black;
+}
+
+.contact .btn-default:hover,
+.contact .btn-default:focus {
+  background-color: #0079fa;
+  color: white;
+  border-color: transparent;
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+.contact .icon {
+  position: relative;
+  float: left;
+  margin-left: 8px;
+  margin-top: -24px;
+  z-index: 2;
+  color: #222222;
+}
+
+.contact .icon-textarea {
+  float: left;
+  margin-left: 8px;
+  margin-top: -104px;
+  position: relative;
+  z-index: 2;
+  color: #222222;
 }

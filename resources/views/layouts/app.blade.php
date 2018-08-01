@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('page') Building Intellect</title>
+    <title>Building Intellect</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -17,6 +17,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/css/temp.css" rel="stylesheet">
+
+    <!--Font Awsome Icons style sheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="app">
@@ -41,10 +44,7 @@
                         </li>
                         @if (Auth::check())
                             <li class="nav-item">
-                                <a class="nav-link" id="bi-nav-link" href="/home">Dashboard</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="bi-nav-link" href="/tickets">Ticketing</a>
+                                <a class="nav-link" id="bi-nav-link" href="/tickets">Work-Orders</a>
                             </li>
                         @endif
                     </ul>
