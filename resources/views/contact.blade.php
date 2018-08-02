@@ -40,6 +40,7 @@
                             @if (Session::has('flash_message'))
                                 <div class="alert alert-success">{{ Session::get('flash_message') }}</div>
                             @endif
+                            <div class="g-recaptcha" id="bi-captcha" data-sitekey="6Ldby2cUAAAAAMVAy-_wp_PfmJGFiE2QWJzSclt0"></div>
                             <div class="col-sm-12 text-center">
                                 <button type="submit" class="btn btn-default">Submit</button>
                             </div>

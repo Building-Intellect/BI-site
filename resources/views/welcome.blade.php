@@ -15,7 +15,7 @@
                     @endif
                     Here at Building Intellect we design, build and program your building's HVAC system and controls.
                     <br />
-                    <span id='welcome-bldg-icon'>
+                    <span id='welcome-icon'>
                         <span class="icon fa fa-building fa-lg"></span>
                     </span>
                     <br />
@@ -25,13 +25,13 @@
                     <br />
                     To check out our current client projects visit the <a href='/clients'>Clients Page</a>.
                     <br />
-                    <span id='welcome-bldg-icon'>
+                    <span id='welcome-icon'>
                         <span class="icon fa fa-cogs fa-lg"></span>
                     </span>
                     <br />
                     If you are planning a new construction project, or want to re-vitalize an existing building, please <a href='/contact'>Contact Us</a>.
                     <br />
-                    <span id='welcome-bldg-icon'>
+                    <span id='welcome-icon'>
                         <span class="icon fa fa-calendar fa-lg"></span>
                     </span>
                     <br />

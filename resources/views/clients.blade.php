@@ -13,6 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <h3>Do you see your organization on this list?</h3>
+                    <span id='clients-icon'>
+                        <span class="icon fa fa-book fa-lg"></span>
+                    </span>
+                    <hr />
                     <div>
                     @foreach($clients as $client)
                         <div class="bi-client">

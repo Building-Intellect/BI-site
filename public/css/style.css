@@ -1,11 +1,12 @@
 /* Site styles */
 
 body {
-    background-color: #fff;
     color: #636b6f;
+    background-color: #636b6e;
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
-    height: 100vh;
+    height: 100%;
+    position: sticky;
     margin: 0;
 }
 
@@ -35,17 +36,59 @@ body {
     font-size: 64px;
 }
 
+#bi-background {
+    min-height: 100vh;
+    max-height: 100%;
+    background-image: linear-gradient(#e0e0e0, #ffffff);
+    box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
+}
+
+#bi-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    padding-top: 5px;
+    background-color: #636b6d;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 0px 15px black;
+}
+
+.bi-footer-link {
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.bi-footer-link:hover {
+    color: black;
+    background-color: whitesmoke;
+    text-decoration: none;
+}
+
+.bi-nav-mobile {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #bi-nav {
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 9999;
     padding: 0px;
-    background-color: #afafaf;
-    box-shadow: 0px 0px 15px gray;
+    background-color: #7a8388;
+    box-shadow: 0px 0px 15px black;
 }
 
-#bi-nav-link {
+.bi-nav-link {
     padding: 10px;
     color: #636b6f;
     font-weight: 600;
@@ -54,15 +97,16 @@ body {
     text-transform: uppercase;
 }
 
-#bi-nav-link:hover {
+.bi-nav-link:hover {
     background-color: #3a3a3a;
-    color: #dbdbdb;
+    color: #dbdbdb !important;
     transition-duration: .25s;
 }
 
-#bi-nav-active {
+.bi-nav-active {
     background-color: #3a3a3a;
-    color: #dbdbdb;
+    color: #dbdbdb !important;
+    pointer-events: none;
 }
 
 .bi-client > ul {
@@ -74,30 +118,45 @@ thead, .card-header {
     font-weight: bold;
 }
 
+/* Welcome page styles */
+
+#welcome-icon {
+    font-size: 64px;
+    color: Dodgerblue;
+}
+
+/* Clients page styles */
+
+#clients-icon {
+    font-size: 64px;
+    color: #636b6e;
+}
+
 /* Contact page styles */
-.container form {
-  padding-top: 20px;
+
+.contact form {
+    padding-top: 20px;
 }
 
-.container label {
-  display: none;
+.contact label {
+    display: none;
 }
 
-.container input,
-.container textarea {
-  /* to create space for placing icon*/
-  padding-left: 32px;
-  border-color: transparent;
-  color: white;
-  background-color: #adaeae;
-  border-radius: 3px;
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding-left: 40px;
+    border-color: transparent;
+    color: gray;
+    background-color: #f7f7f7;
+    border-radius: 3px;
 }
 
-.container input::placeholder {
-  color: white;
+.contact input::placeholder, .contact textarea::placeholder {
+  color: gray;
 }
 
-.container .btn-default {
+.contact .btn-default {
   margin-top: 5px;
   margin-bottom: 30px;
   padding: 15px 36px;
@@ -107,16 +166,15 @@ thead, .card-header {
   color: black;
 }
 
-.container .btn-default:hover,
-.container .btn-default:focus {
-  background-color: black;
+.contact .btn-default:hover,
+.contact .btn-default:focus {
+  background-color: #0079fa;
   color: white;
   border-color: transparent;
   outline: 0px auto -webkit-focus-ring-color;
 }
 
-/*position should be relative and z-index greater than one*/
-.container .icon {
+.contact .icon {
   position: relative;
   float: left;
   margin-left: 8px;
@@ -125,11 +183,11 @@ thead, .card-header {
   color: #222222;
 }
 
-.container .icon-textarea {
+.contact .icon-textarea {
   float: left;
   margin-left: 8px;
   margin-top: -104px;
   position: relative;
   z-index: 2;
-  color: white;
+  color: #222222;
 }
