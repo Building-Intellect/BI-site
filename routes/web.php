@@ -26,6 +26,8 @@ Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
 
+Route::get('issues', 'IssuesController@indexIssues');
+
 Route::get('email', function() {
 	Mail::send('email.test', ['name' => 'TestParam'], function($message) {
         $message->from('noreply@buildingintellect.com');

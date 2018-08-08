@@ -51,6 +51,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link bi-nav-link" id="work-orders" href="/tickets">Work-Orders</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link bi-nav-link" id="issues" href="/issues">Issues</a>
+                                </li>
                             @endif
                         </ul>
 
