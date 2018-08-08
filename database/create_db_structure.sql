@@ -31,4 +31,3 @@ CREATE TABLE client_contacts
 SET NAMES 'utf8';
 
 UPDATE ticketit_settings SET value = 'layouts.app' WHERE ticketit_settings.id = 5;
-UPDATE ticketit_settings SET default = 'layouts.app' WHERE ticketit_settings.id = 5;
