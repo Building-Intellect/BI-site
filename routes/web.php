@@ -44,9 +44,8 @@ Route::get('clear-cache', function() {
     return '<h1>Facade, Routes, Views, and Config cache values cleared</h1>';
 });
 
-// Seed work-order ticket settings
+// Seed work-order and issues ticket settings
 Route::get('/seed-work-orders', function () {
-
     $work_orders_seeder = new \Kordy\Ticketit\Seeds\TicketitTableSeeder;
     $work_orders_seeder->email_domain = '@example.com'; // the email domain name for demo accounts. Ex. user1@example.com
     $work_orders_seeder->agents_qty = 3; // number of demo agents accounts
@@ -65,8 +64,9 @@ Route::get('/seed-work-orders', function () {
     $work_orders_seeder->categories = [
         'Maintenance' => '#0014f4',
         'Warranty' => '#2b9900',
-        'Programming' => '#2b9900',
-        'Controls' => '#7e0099'
+        'Programming' => '#0f3600',
+        'Controls' => '#7e0099',
+        'Issues' => '#ae0015'
     ];
     $work_orders_seeder->statuses = [
         'Queued' => '#e69900',
@@ -78,8 +78,6 @@ Route::get('/seed-work-orders', function () {
         'Normal' => '#e1d200',
         'Critical' => '#e10000'
     ];
-
     $work_orders_seeder->run();
-
-    return 'done';
+    return view('tickets');
 });

@@ -14,7 +14,7 @@
         var tokens = currentURL.split("/");
         var currentPage = tokens[tokens.length - 1];
         var navItem;
-        if (currentPage == '') {
+        if (currentPage == '' || currentPage == 'home') {
             navItem = document.getElementById('welcome');
         } else if (currentURL.includes('tickets')) {
             navItem = document.getElementById('work-orders');
