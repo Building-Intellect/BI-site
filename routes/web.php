@@ -16,19 +16,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+Route::get('home', 'HomeController@index')->name('home');
+
 Route::get('clients', 'ClientController@getClients');
 
 Route::get('contact', 'ContactController@create');
 
 Route::post('contact', 'ContactController@send');
 
-Auth::routes();
+Route::get('products', 'ProductsController@index');
 
-Route::get('home', 'HomeController@index')->name('home');
-
-Route::get('issues', 'IssuesController@indexIssues');
-
-Route::get('email', function() {
+Route::get('email-test', function() {
 	Mail::send('email.test', ['name' => 'TestParam'], function($message) {
         $message->from('noreply@buildingintellect.com');
 		$message->to('chikn42@gmail.com', 'Building Intellect')->subject('Site Contact: ');

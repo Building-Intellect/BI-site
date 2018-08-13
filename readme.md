@@ -34,6 +34,8 @@
 - **Setup composer for php and clone BI-site into xampp server:**
 
 
+  ```cd ~```
+
   ```sudo apt-get install curl php-cli php-mbstring git unzip```
 
   ```curl -sS https://getcomposer.org/installer -o composer-setup.php```
@@ -51,6 +53,10 @@
 
   ```sudo apt-get install php-xml```
 
+  ```sudo apt-get install php-mysql```
+
+  Visit localhost phpmyadmin, create admin database account and buildingintellect database.
+
   ```composer install```
 
   ```sudo nano /opt/lampp/etc/httpd.conf```
@@ -61,13 +67,13 @@
 
   Replace dummy configuration with the following code and save:
   ```
-  <VirtualHost *:80>
+  <VirtualHost *:4000>
+      DocumentRoot "/opt/lampp/htdocs/BI-site/public"
+      ServerName buildingintellect.local
+  </VirtualHost>
+  <VirtualHost 127.0.0.1:80>
       DocumentRoot "/opt/lampp/htdocs/"
       ServerName localhost
-  </VirtualHost>
-  <VirtualHost *:80>
-      DocumentRoot "/opt/lampp/htdocs/BI-site/public"
-      ServerName bi-site.local
   </VirtualHost>
   ```
 
@@ -77,7 +83,7 @@
 
   add the following hostname line and save:
 
-  ```127.0.0.1       bi-site.local```
+  ```127.0.0.1       buildingintellect.local```
 
 - **Modify permissions for BI-site**
 
@@ -87,7 +93,7 @@
 
 - **Restart all from xampp manager**
 
-  Visit http://bi-site.local in browser and PRESTO!
+  Visit http://buildingintellect.local:4000 in browser and PRESTO!
 
 ## Learning Laravel
 

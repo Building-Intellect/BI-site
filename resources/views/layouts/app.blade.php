@@ -52,7 +52,7 @@
                                     <a class="nav-link bi-nav-link" id="work-orders" href="/tickets">Work-Orders</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link bi-nav-link" id="issues" href="/issues">Issues</a>
+                                    <a class="nav-link bi-nav-link" id="products" href="/products">Products</a>
                                 </li>
                             @endif
                         </ul>
