@@ -67,7 +67,7 @@
 
   Replace dummy configuration with the following code and save:
   ```
-  <VirtualHost *:4000>
+  <VirtualHost *:48501>
       DocumentRoot "/opt/lampp/htdocs/BI-site/public"
       ServerName buildingintellect.local
   </VirtualHost>

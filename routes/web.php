@@ -48,7 +48,7 @@ Route::get('clear-cache', function() {
 Route::get('/seed-work-orders', function () {
     $work_orders_seeder = new \Kordy\Ticketit\Seeds\TicketitTableSeeder;
     $work_orders_seeder->email_domain = '@example.com'; // the email domain name for demo accounts. Ex. user1@example.com
-    $work_orders_seeder->agents_qty = 3; // number of demo agents accounts
+    $work_orders_seeder->agents_qty = 8; // number of demo agents accounts
     $work_orders_seeder->agents_per_category = 2; // number of demo agents per category (must be lower than $agents_qty)
     $work_orders_seeder->users_qty = 10; // number of demo users accounts
     $work_orders_seeder->tickets_per_user_min = 1; // Minimum number of generated tickets per user
@@ -65,8 +65,7 @@ Route::get('/seed-work-orders', function () {
         'Maintenance' => '#0014f4',
         'Warranty' => '#2b9900',
         'Programming' => '#0f3600',
-        'Controls' => '#7e0099',
-        'Issues' => '#ae0015'
+        'Controls' => '#7e0099'
     ];
     $work_orders_seeder->statuses = [
         'Queued' => '#e69900',
