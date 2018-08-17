@@ -34,8 +34,6 @@
 - **Setup composer for php and clone BI-site into xampp server:**
 
 
-  ```cd ~```
-
   ```sudo apt-get install curl php-cli php-mbstring git unzip```
 
   ```curl -sS https://getcomposer.org/installer -o composer-setup.php```
@@ -53,19 +51,19 @@
 
   ```sudo apt-get install php-xml```
 
-  ```sudo apt-get install php-mysql```
-
-  Visit localhost phpmyadmin, create admin database account and buildingintellect database.
-
   ```composer install```
 
   ```sudo nano /opt/lampp/etc/httpd.conf```
 
   Find 'Include etc/extra/httpd-vhosts.conf' line and uncomment it, then save.
 
+  ```sudo nano /opt/lampp/apache2/conf/httpd.conf```
+
+  Add 'Listen 48501' line at the top of configuration, then save.
+
   ```sudo nano /opt/lampp/etc/extra/httpd-vhosts.conf```
 
-  Replace dummy configuration with the following code and save:
+  Replace all dummy configuration with the following code and save:
   ```
   <VirtualHost *:48501>
       DocumentRoot "/opt/lampp/htdocs/BI-site/public"
@@ -93,7 +91,9 @@
 
 - **Restart all from xampp manager**
 
-  Visit http://buildingintellect.local:4000 in browser and PRESTO!
+  ```sudo /opt/lampp/manager-linux-x64.run```
+
+  Restart all, then visit http://buildingintellect.local:48501 in browser and PRESTO!
 
 ## Learning Laravel
 
