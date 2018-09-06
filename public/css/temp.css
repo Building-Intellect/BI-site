@@ -198,3 +198,13 @@ thead, .card-header {
   z-index: 2;
   color: #222222;
 }
+
+/* Products page styles */
+
+.padding-0 {
+    padding: 0px !important;
+}
+
+.padding-15 {
+    padding: 15px !important;
+}

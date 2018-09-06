@@ -17,7 +17,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="/css/temp.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
     <!--Font Awsome Icons style sheet-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
