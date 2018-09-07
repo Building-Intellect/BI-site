@@ -160,43 +160,43 @@ thead, .card-header {
 }
 
 .contact input::placeholder, .contact textarea::placeholder {
-  color: gray;
+    color: gray;
 }
 
 .contact .btn-default {
-  margin-top: 5px;
-  margin-bottom: 30px;
-  padding: 15px 36px;
-  background-color: #adaeae;
-  border-radius: 3px;
-  border: 0px;
-  color: black;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding: 15px 36px;
+    background-color: #adaeae;
+    border-radius: 3px;
+    border: 0px;
+    color: black;
 }
 
 .contact .btn-default:hover,
 .contact .btn-default:focus {
-  background-color: #0079fa;
-  color: white;
-  border-color: transparent;
-  outline: 0px auto -webkit-focus-ring-color;
+    background-color: #0079fa;
+    color: white;
+    border-color: transparent;
+    outline: 0px auto -webkit-focus-ring-color;
 }
 
 .contact .icon {
-  position: relative;
-  float: left;
-  margin-left: 8px;
-  margin-top: -24px;
-  z-index: 2;
-  color: #222222;
+    position: relative;
+    float: left;
+    margin-left: 8px;
+    margin-top: -24px;
+    z-index: 2;
+    color: #222222;
 }
 
 .contact .icon-textarea {
-  float: left;
-  margin-left: 8px;
-  margin-top: -104px;
-  position: relative;
-  z-index: 2;
-  color: #222222;
+    float: left;
+    margin-left: 8px;
+    margin-top: -104px;
+    position: relative;
+    z-index: 2;
+    color: #222222;
 }
 
 /* Products page styles */
@@ -207,4 +207,61 @@ thead, .card-header {
 
 .padding-15 {
     padding: 15px !important;
+}
+
+.bi-product {
+    border-radius: 3px;
+}
+
+.bi-product:hover {
+    box-shadow: 0px 0px 10px gray;
+    background-color: #7c94a5;
+    color: white;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+
+#lightbox {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#lightbox.open {
+    display: block;
+}
+
+#lightbox_content {
+    position: absolute;
+    width: 80%;
+    height: 86%;
+    background: #ffffff;
+    border-radius: 3px;
+    left: 10%;
+    bottom: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+    text-align: center;
+}
+
+#embeddedPDF {
+    width: 100%;
+    height: 100%;
+}
+
+#exit {
+    position: absolute;
+    margin-left: 40vw;
+    bottom: 5%;
+    left: inherit;
+    border-radius: 15px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
 }

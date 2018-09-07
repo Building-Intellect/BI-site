@@ -2,6 +2,13 @@
 
 @section('content')
 <div class="container">
+    <div id="lightbox">
+        <div id="lightbox_content">
+            <iframe id="embeddedPDF" src="" frameborder="0"></iframe>
+            <!--<embed id="embeddedPDF" src="" width="100%" height="100%" type='application/pdf'>-->
+        </div>
+        <button class="btn btn-primary"id="exit">Click outside the document to exit.</button>
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
@@ -17,7 +24,7 @@
                     <br />
                     <br />
                     <div class="col-md-12 padding-0">
-                      <div class="img-crop"><img src="https://www.reliablecontrols.com/assets/img/products/Building-Controls-Products-Overview.jpg" class="img-caption img-fluid rounded" alt=""></div>
+                      <div class="img-crop"><img src="/img/reliable-controls.jpg" class="img-caption img-fluid rounded" alt=""></div>
                       <div class="carousel-caption">
                         <h1 class="brand-white-black pull-right">Reliable Controls</h1>
                       </div>
@@ -32,26 +39,26 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
                           <div class="row">
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProView<sup>™</sup> with Router</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPV-R/MPV-R.png" style="max-width:140px;padding-top:11px"></a></div></div>
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProView<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPV/MPV.png" style="max-width:140px;padding-top:11px"></a></div></div>
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProView<sup>™</sup> LCD with Router</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPV-L-R/MPV-L-R.png" style="max-width:140px;padding-top:10px"></a></div></div>
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProView<sup>™</sup> LCD</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPV-L/MPV-L.png" style="max-width:140px;padding-top:10px"></a></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPV-R_En_Imp.pdf')"><div class="h180"><h6>MACH-ProView<sup>™</sup> with Router</h6><img src="https://www.reliablecontrols.com/assets/img/products/MPV-R/MPV-R.png" style="max-width:140px;padding-top:11px"></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPV_En_Imp.pdf')"><div class="h180"><h6>MACH-ProView<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPV/MPV.png" style="max-width:140px;padding-top:11px"></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPV-L-R_En_Imp.pdf')"><div class="h180"><h6>MACH-ProView<sup>™</sup> LCD with Router</h6><img src="https://www.reliablecontrols.com/assets/img/products/MPV-L-R/MPV-L-R.png" style="max-width:140px;padding-top:10px"></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPV-L_En_Imp.pdf')"><div class="h180"><h6>MACH-ProView<sup>™</sup> LCD</h6><img src="https://www.reliablecontrols.com/assets/img/products/MPV-L/MPV-L.png" style="max-width:140px;padding-top:10px"></div></div>
                           </div>
                           <div class="row">
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-CheckPoint<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MCP/MCP.png" style="max-width:140px;padding-top:25px"></a></div></div>
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProWebSys<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPWS/MPWS.png" style="max-height:140px"></a></div></div>
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProWebCom<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPWC/MPWC.png" style="max-height:140px"></a></div></div>
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProSys<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPS/MPS.png" style="max-height:140px"></a></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MCP_En_Imp.pdf')"><div class="h180"><h6>MACH-CheckPoint<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/MCP/MCP.png" style="max-width:140px;padding-top:25px"></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPWS_En_Imp.pdf')"><div class="h180"><h6>MACH-ProWebSys<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPWS/MPWS.png" style="max-height:140px"></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPWC_En_Imp.pdf')"><div class="h180"><h6>MACH-ProWebCom<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPWC/MPWC.png" style="max-height:140px"></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPS_En_Imp.pdf')"><div class="h180"><h6>MACH-ProSys<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPS/MPS.png" style="max-height:140px"></div></div>
                           </div>
                           <div class="row">
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProCom<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPC/MPC.png" style="max-height:140px"></a></div></div>
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-Pro1<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MP1/MP1.png" style="max-height:140px"></a></div></div>
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-Pro2<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MP2/MP2.png" style="max-height:140px"></a></div></div>
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProAir<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPA/MPA.png" style="max-height:140px"></a></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPC_En_Imp.pdf')"><div class="h180"><h6>MACH-ProCom<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPC/MPC.png" style="max-height:140px"></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MP1_En_Imp.pdf')"><div class="h180"><h6>MACH-Pro1<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/MP1/MP1.png" style="max-height:140px"></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MP2_En_Imp.pdf')"><div class="h180"><h6>MACH-Pro2<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/MP2/MP2.png" style="max-height:140px"></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPA_En_Imp.pdf')"><div class="h180"><h6>MACH-ProAir<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPA/MPA.png" style="max-height:140px"></div></div>
                           </div>
                           <div class="row">
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProZone<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPZ/MPZ.png" style="max-width:140px;padding-top:29px"></a></div></div>
-                              <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>SMART-Space<sup>™</sup> Controller</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/SSC/SSC.png" style="max-height:140px"></a></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPZ_En_Imp.pdf')"><div class="h180"><h6>MACH-ProZone<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPZ/MPZ.png" style="max-width:140px;padding-top:29px"></div></div>
+                              <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_SSC_En_Imp.pdf')"><div class="h180"><h6>SMART-Space<sup>™</sup> Controller</h6><img src="https://www.reliablecontrols.com/assets/img/products/SSC/SSC.png" style="max-height:140px"></div></div>
                               <div class="col-sm-3"></div>
                               <div class="col-sm-3"></div>
                           </div>
@@ -67,15 +74,15 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                           <div class="card-body">
                             <div class="row">
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>SMART-Sensor<sup>™</sup> EPD</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/SS3-E/SS3-E.png" style="max-height:140px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>SMART-Sensor<sup>™</sup> LCD</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/SSL/SSL.png" style="max-height:140px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>SMART-Sensor<sup>™</sup></small></h6><img src="https://www.reliablecontrols.com/assets/img/products/SS3/SS3.png" style="max-height:140px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>SMART-Sensor<sup>™</sup> Duct</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/SSDUCT/SSDUCT.png" style="max-height:140px"></a></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_SS3-EPD_En_Imp.pdf')"><div class="h180"><h6>SMART-Sensor<sup>™</sup> EPD</h6><img src="https://www.reliablecontrols.com/assets/img/products/SS3-E/SS3-E.png" style="max-height:140px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_SSL_En_Imp.pdf')"><div class="h180"><h6>SMART-Sensor<sup>™</sup> LCD</h6><img src="https://www.reliablecontrols.com/assets/img/products/SSL/SSL.png" style="max-height:140px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_SS3_En_Imp.pdf')"><div class="h180"><h6>SMART-Sensor<sup>™</sup></h6><img src="https://www.reliablecontrols.com/assets/img/products/SS3/SS3.png" style="max-height:140px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_SS-DUCT_En_Imp.pdf')"><div class="h180"><h6>SMART-Sensor<sup>™</sup> Duct</h6><img src="https://www.reliablecontrols.com/assets/img/products/SSDUCT/SSDUCT.png" style="max-height:140px"></div></div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Touch Screen Panel-i5</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/TSP-i5/TSP-i5.png" style="max-width:140px;padding-top:16px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Touch Screen Panel - Celeron</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/TSP-Celeron/TSP-Celeron.png" style="max-width:140px;padding-top:16px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>X-Port<sup>™</sup> 2 Converter</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/XP/XP.png" style="max-width:140px;padding-top:23px"></a></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_TSPi5_En_Imp.pdf')"><div class="h180"><h6>Touch Screen Panel-i5</h6><img src="https://www.reliablecontrols.com/assets/img/products/TSP-i5/TSP-i5.png" style="max-width:140px;padding-top:16px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_TSPceleron_En_Imp.pdf')"><div class="h180"><h6>Touch Screen Panel - Celeron</h6><img src="https://www.reliablecontrols.com/assets/img/products/TSP-Celeron/TSP-Celeron.png" style="max-width:140px;padding-top:16px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('XP2_rgb.pdf')"><div class="h180"><h6>X-Port<sup>™</sup> 2 Converter</h6><img src="https://www.reliablecontrols.com/assets/img/products/XP/XP.png" style="max-width:140px;padding-top:23px"></div></div>
                                 <div class="col-sm-3"></div>
                             </div>
                           </div>
@@ -90,22 +97,22 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                           <div class="card-body">
                             <div class="row">
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Lighting Interface Module</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/LIM/LIM.png" style="max-height:140px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Flow Sensor</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/FS/FS.png" style="max-height:140px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>TRIAC Module</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/TRCFP/TRCFP.png" style="max-height:140px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Mechanical Relays</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/Relays/Relays.png" style="max-width:140px;padding-top:6px"></a></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_LIM_En_Imp.pdf')"><div class="h180"><h6>Lighting Interface Module</h6><img src="https://www.reliablecontrols.com/assets/img/products/LIM/LIM.png" style="max-height:140px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_FS_En_Imp.pdf')"><div class="h180"><h6>Flow Sensor</h6><img src="https://www.reliablecontrols.com/assets/img/products/FS/FS.png" style="max-height:140px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('TR_rgb.pdf')"><div class="h180"><h6>TRIAC Module</h6><img src="https://www.reliablecontrols.com/assets/img/products/TRCFP/TRCFP.png" style="max-height:140px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MR.pdf')"><div class="h180"><h6>Mechanical Relays</h6><img src="https://www.reliablecontrols.com/assets/img/products/Relays/Relays.png" style="max-width:140px;padding-top:6px"></div></div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Relative Humidity (RH) Sensors</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/RHR/RHR.png" style="max-width:140px;padding-top:8px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Gage Pressure</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/GP/GP.png" style="max-width:140px;padding-top:33px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Differential Pressure Switch</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/DBL/DBL.png" style="max-width:140px;padding-top:5px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Carbon Monoxide CO &amp; Nitrogren Dioxide NO2 Sensors</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/CO-NO2/CO-NO2.png" style="max-height:140px"></a></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('ACI_RCC_RHResistive.pdf')"><div class="h180"><h6>Relative Humidity (RH) Sensors</h6><img src="https://www.reliablecontrols.com/assets/img/products/RHR/RHR.png" style="max-width:140px;padding-top:8px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('ACI_RCC_GP.pdf')"><div class="h180"><h6>Gage Pressure</h6><img src="https://www.reliablecontrols.com/assets/img/products/GP/GP.png" style="max-width:140px;padding-top:33px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('ACI_RCC_DBL.pdf')"><div class="h180"><h6>Differential Pressure Switch</h6><img src="https://www.reliablecontrols.com/assets/img/products/DBL/DBL.png" style="max-width:140px;padding-top:5px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('ACI_RCC_CO-NO2.pdf')"><div class="h180"><h6>Carbon Monoxide CO &amp; Nitrogren Dioxide NO2 Sensors</h6><img src="https://www.reliablecontrols.com/assets/img/products/CO-NO2/CO-NO2.png" style="max-height:140px"></div></div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Carbon Dioxide CO2 Duct Sensor</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/CO2Duct/CO2Duct.png" style="max-height:140px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>General Mounting Thermistors</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/Thermistors/Thermistors.png" style="max-height:140px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Current Transducer</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/transducer/transducer.png" style="max-height:140px"></a></div></div>
-                                <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>BACnet<sup>®</sup> Transmitters</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/transmitters/transmitters.png" style="max-width:140px;padding-top:18px"></a></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('ACI_RCC_CO2Duct.pdf')"><div class="h180"><h6>Carbon Dioxide CO2 Duct Sensor</h6><img src="https://www.reliablecontrols.com/assets/img/products/CO2Duct/CO2Duct.png" style="max-height:140px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('ACI_RCC_Thermistor.pdf')"><div class="h180"><h6>General Mounting Thermistors</h6><img src="https://www.reliablecontrols.com/assets/img/products/Thermistors/Thermistors.png" style="max-height:140px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('RIBXKTV_SERIES.pdf')"><div class="h180"><h6>Current Transducer</h6><img src="https://www.reliablecontrols.com/assets/img/products/transducer/transducer.png" style="max-height:140px"></div></div>
+                                <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('BACnet_transmitter.pdf')"><div class="h180"><h6>BACnet<sup>®</sup> Transmitters</h6><img src="https://www.reliablecontrols.com/assets/img/products/transmitters/transmitters.png" style="max-width:140px;padding-top:18px"></div></div>
                             </div>
                           </div>
                         </div>
@@ -119,26 +126,26 @@
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                           <div class="card-body">
                               <div class="row">
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProPoint<sup>™</sup> Input/Output Universal</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPPIOU/MPPIOU.png" style="max-height:140px"></a></div></div>
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProPoint<sup>™</sup> Input/Output</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPP/MPP.png" style="max-height:140px"></a></div></div>
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProPoint<sup>™</sup> Input</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPPI/MPPI.png" style="max-height:140px"></a></div></div>
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>MACH-ProPoint<sup>™</sup> Output</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/MPPO/MPPO.png" style="max-height:140px"></a></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPPIOU_En_Imp.pdf')"><div class="h180"><h6>MACH-ProPoint<sup>™</sup> Input/Output Universal</h6><img src="https://www.reliablecontrols.com/assets/img/products/MPPIOU/MPPIOU.png" style="max-height:140px"></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPP_En_Imp.pdf')"><div class="h180"><h6>MACH-ProPoint<sup>™</sup> Input/Output</h6><img src="https://www.reliablecontrols.com/assets/img/products/MPP/MPP.png" style="max-height:140px"></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPP-I_En_Imp.pdf')"><div class="h180"><h6>MACH-ProPoint<sup>™</sup> Input</h6><img src="https://www.reliablecontrols.com/assets/img/products/MPPI/MPPI.png" style="max-height:140px"></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_MPP-O_En_Imp.pdf')"><div class="h180"><h6>MACH-ProPoint<sup>™</sup> Output</h6><img src="https://www.reliablecontrols.com/assets/img/products/MPPO/MPPO.png" style="max-height:140px"></div></div>
                               </div>
                               <div class="row">
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Enclosures</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/ENC/ENC.png" style="max-width:140px;padding-top:32px"></a></div></div>
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Universal Output Module</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/UM/UM.png" style="max-width:140px;padding-top:24px"></a></div></div>
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Relay Output Module</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/RM/RM.png" style="max-width:140px;padding-top:25px"></a></div></div>
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>TRIAC Output Module</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/TM/TM.png" style="max-width:140px;padding-top:28px"></a></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_ENC_En_Imp.pdf')"><div class="h180"><h6>Enclosures</h6><img src="https://www.reliablecontrols.com/assets/img/products/ENC/ENC.png" style="max-width:140px;padding-top:32px"></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_OM_En_Imp.pdf')"><div class="h180"><h6>Universal Output Module</h6><img src="https://www.reliablecontrols.com/assets/img/products/UM/UM.png" style="max-width:140px;padding-top:24px"></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_OM_En_Imp.pdf')"><div class="h180"><h6>Relay Output Module</h6><img src="https://www.reliablecontrols.com/assets/img/products/RM/RM.png" style="max-width:140px;padding-top:25px"></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_OM_En_Imp.pdf')"><div class="h180"><h6>TRIAC Output Module</h6><img src="https://www.reliablecontrols.com/assets/img/products/TM/TM.png" style="max-width:140px;padding-top:28px"></div></div>
                               </div>
                               <div class="row">
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>SS3 Backplate Extender</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/SS3-EP/SS3-EP.png" style="max-width:140px;padding-top:4px"></a></div></div>
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>SMART-Net<sup>™</sup> eXpansion Board</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/SSX/SSX.png" style="max-width:140px;padding-top:18px"></a></div></div>
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Power Supply VDC</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/PSVDC/PSVDC.png" style="max-width:140px;padding-top:13px"></a></div></div>
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>Power Supply WDC</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/PSWDC/PSWDC.png" style="max-height:140px"></a></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_SS3-Extender-Plate_En_Imp.pdf')"><div class="h180"><h6>SS3 Backplate Extender</h6><img src="https://www.reliablecontrols.com/assets/img/products/SS3-EP/SS3-EP.png" style="max-width:140px;padding-top:4px"></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_SSX_En_Imp.pdf')"><div class="h180"><h6>SMART-Net<sup>™</sup> eXpansion Board</h6><img src="https://www.reliablecontrols.com/assets/img/products/SSX/SSX.png" style="max-width:140px;padding-top:18px"></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('PSVDC_rgb.pdf')"><div class="h180"><h6>Power Supply VDC</h6><img src="https://www.reliablecontrols.com/assets/img/products/PSVDC/PSVDC.png" style="max-width:140px;padding-top:13px"></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_PS-WDC_En_Imp.pdf')"><div class="h180"><h6>Power Supply WDC</h6><img src="https://www.reliablecontrols.com/assets/img/products/PSWDC/PSWDC.png" style="max-height:140px"></div></div>
                               </div>
                               <div class="row">
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>End of Line Terminator</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/EOL/EOL.png" style="max-height:140px"></a></div></div>
-                                  <div class="col-sm-3 padding-15 acenter"><div class="h180"><a href=""><h6><small>24 VAC Transformer</small></h6><img src="https://www.reliablecontrols.com/assets/img/products/TRANS/TRANS.png" style="max-width:140px;padding-top:2px"></a></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_NAEOL_En_Imp.pdf')"><div class="h180"><h6>End of Line Terminator</h6><img src="https://www.reliablecontrols.com/assets/img/products/EOL/EOL.png" style="max-height:140px"></div></div>
+                                  <div class="col-sm-3 padding-15 acenter bi-product" onclick="displayPDF('Catalog_Transformer_En_Imp.pdf')"><div class="h180"><h6>24 VAC Transformer</h6><img src="https://www.reliablecontrols.com/assets/img/products/TRANS/TRANS.png" style="max-width:140px;padding-top:2px"></div></div>
                                   <div class="col-sm-3"></div>
                                   <div class="col-sm-3"></div>
                               </div>
