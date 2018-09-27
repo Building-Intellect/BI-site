@@ -51,7 +51,11 @@
 
   ```sudo apt-get install php-xml```
 
+  ```sudo apt-get install php-mysql```
+
   ```composer install```
+
+  ```php artisan migrate```
 
   ```sudo nano /opt/lampp/etc/httpd.conf```
 
