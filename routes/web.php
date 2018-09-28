@@ -11,8 +11,6 @@
 |
 */
 use Illuminate\Support\Facades\Mail;
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,7 +29,10 @@ Route::post('contact', 'ContactController@send');
 Route::get('products', 'ProductsController@index');
 
 Route::get('email-test', function() {
-    sendEmail('chikn42@gmail.com', 'Building Intellect Test Email', 'test', 'Name');
+    Mail::send('email.test', ['name' => 'TestParam'], function($message) {
+        $message->from('noreply@buildingintellect.com');
+		$message->to('chikn42@gmail.com', 'Building Intellect')->subject('Test Email');
+	});
 });
 
 // Clear all cache values:
@@ -40,6 +41,7 @@ Route::get('clear-cache', function() {
     $exitCode2 = Artisan::call('route:clear');
     $exitCode3 = Artisan::call('view:clear');
     $exitCode4 = Artisan::call('config:cache');
+    $exitCode5 = Artisan::call('config:clear');
     return '<h1>Facade, Routes, Views, and Config cache values cleared</h1>';
 });
 
@@ -47,8 +49,8 @@ Route::get('clear-cache', function() {
 Route::get('/seed-work-orders', function () {
     $work_orders_seeder = new \Kordy\Ticketit\Seeds\TicketitTableSeeder;
     $work_orders_seeder->email_domain = '@example.com'; // the email domain name for demo accounts. Ex. user1@example.com
-    $work_orders_seeder->agents_qty = 8; // number of demo agents accounts
-    $work_orders_seeder->agents_per_category = 2; // number of demo agents per category (must be lower than $agents_qty)
+    $work_orders_seeder->agents_qty = 4; // number of demo agents accounts
+    $work_orders_seeder->agents_per_category = 1; // number of demo agents per category (must be lower than $agents_qty)
     $work_orders_seeder->users_qty = 10; // number of demo users accounts
     $work_orders_seeder->tickets_per_user_min = 1; // Minimum number of generated tickets per user
     $work_orders_seeder->tickets_per_user_max = 5; // Maximum number of generated tickets per user
@@ -79,32 +81,3 @@ Route::get('/seed-work-orders', function () {
     $work_orders_seeder->run();
     return view('tickets');
 });
-
-// send email using phpmailer and godaddy smtp forwarding
-function sendEmail($to, $subject, $message, $name) {
-    define('SMTP_HOST', 'relay-hosting.secureserver.net');
-    define('SMTP_PORT', 25);
-    define('SMTP_AUTH', true);
-
-    $mail = new PHPMailer(true);
-    $mail->IsSMTP();
-    $mail -> SMTPDebug = 1;
-    $mail->Host = "smtpout.secureserver.net";
-    $mail->SMTPAuth = SMTP_AUTH;
-    $mail->Port = 80;
-    $mail->Username = "kellann@buildingintellect.com";
-    $mail->Password = "890p890p";
-    //$mail->SMTPSecure = 'ssl';
-    $mail->SetFrom('noreply@buildingintellect.com');
-    $mail->Subject = $subject;
-    $body = $message;
-    $mail->AltBody = "To view the message, please use an HTML compatible email viewer!";
-    $mail->MsgHTML($body);
-    $address = $to;
-    $mail->AddAddress($address, $name);
-    if(!$mail->Send()) {
-        return 0;
-    } else {
-        return 1;
-    }
-}
