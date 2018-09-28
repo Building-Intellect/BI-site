@@ -11,7 +11,8 @@
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "guzzlehttp/guzzle": "~5.3|~6.0",
-        "buzz/laravel-google-captcha": "2.*"
+        "buzz/laravel-google-captcha": "2.*",
+        "phpmailer/phpmailer": "~6.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
@@ -20,7 +21,8 @@
         "nunomaduro/collision": "^2.0",
         "phpunit/phpunit": "^7.0",
         "guzzlehttp/guzzle": "~5.3|~6.0",
-        "buzz/laravel-google-captcha": "2.*"
+        "buzz/laravel-google-captcha": "2.*",
+        "phpmailer/phpmailer": "~6.0"
     },
     "autoload": {
         "classmap": [

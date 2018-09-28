@@ -20,7 +20,7 @@
 
                     @yield('ticketit_header')
                 </h5>
-                <div class="card-body pl-20 pr-20">
+                <div class="card-body @yield('ticketit_content_parent_class')">
                     @yield('ticketit_content')
                 </div>
             </div>
