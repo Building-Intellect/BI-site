@@ -1,5 +1,7 @@
 /* Site styles */
 
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
 body {
     color: #636b6f;
     background-color: #636b6e;
@@ -130,6 +132,23 @@ thead, .card-header {
 #welcome-icon {
     font-size: 64px;
     color: Dodgerblue;
+}
+
+header.carousel {
+    height: 500px;
+}
+
+header.carousel .carousel-item,
+header.carousel .carousel-item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 /* Clients page styles */

@@ -3,9 +3,51 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header title">Building Intellect</div>
+                <div class="card-header">
+                    <!-- Header Carousel -->
+                    <header id="welcomeCarousel" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#welcomeCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#welcomeCarousel" data-slide-to="1"></li>
+                            <li data-target="#welcomeCarousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="fill d-block w-100" src="/img/welcome_1.jpg" alt="First slide">
+                                <div class="carousel-caption">
+                                    <h2>Building Intellect</h2>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="fill d-block w-100" src="/img/welcome_2.jpg" alt="Second slide">
+                                <div class="carousel-caption">
+                                    <h2>Make your buildings work smarter</h2>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="fill d-block w-100" src="/img/welcome_3.jpg" alt="Third slide">
+                                <div class="carousel-caption">
+                                    <h2>Optimize your operating energy consumption</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="carousel-control-prev" href="#welcomeCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#welcomeCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </header>
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,6 +55,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
                     Here at Building Intellect we design, build and program your building's HVAC system and controls.
                     <br />
                     <span id='welcome-icon'>

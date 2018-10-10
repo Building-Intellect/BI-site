@@ -16,8 +16,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/temp.css" rel="stylesheet">
 
     <!--Font Awsome Icons style sheet-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -103,8 +103,9 @@
 
     <!-- Scripts -->
     <script type="text/javascript" src="/js/behavior.js"></script>
-    <script src="/js/jquery-3.3.1.min.js"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/js/popper-1.14.3.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
     @yield('footer')
 </body>
 </html>
