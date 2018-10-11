@@ -62,6 +62,7 @@
                                 <span class="icon fa fa-building fa-lg"></span>
                             </span>
                             <br>
+                            <br>
                             At Building Intellect we design, build and program your building's HVAC and overall control systems.
                             <br>
                             <br>
@@ -71,6 +72,7 @@
                             <span id='welcome-icon'>
                                 <span class="icon fa fa-cogs fa-lg"></span>
                             </span>
+                            <br>
                             <br>
                             For our clients, we go the extra mile to make sure your building gives
                             any occupants exactly what they want automatically.
