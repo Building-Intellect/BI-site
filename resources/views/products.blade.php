@@ -26,7 +26,7 @@
                     <div class="col-md-12 padding-0">
                       <div class="img-crop"><img src="/img/reliable-controls.jpg" class="img-caption img-fluid rounded" alt=""></div>
                       <div class="carousel-caption">
-                        <h1 class="brand-white-black pull-right">Reliable Controls</h1>
+                        <h2 class="brand-white-black pull-right">Reliable Controls</h2>
                       </div>
                     </div>
                     <div id="accordion">

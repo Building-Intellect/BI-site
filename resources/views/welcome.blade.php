@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header">
                     <!-- Header Carousel -->
-                    <header id="welcomeCarousel" class="carousel slide">
+                    <header id="welcomeCarousel" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#welcomeCarousel" data-slide-to="0" class="active"></li>
@@ -56,31 +56,66 @@
                         </div>
                     @endif
 
-                    Here at Building Intellect we design, build and program your building's HVAC system and controls.
-                    <br />
-                    <span id='welcome-icon'>
-                        <span class="icon fa fa-building fa-lg"></span>
-                    </span>
-                    <br />
-                    For our clients, we go the extra mile to make sure your building gives any occupants exactly what they want automatically.
-                    <br />
-                    We also tailor our projects to offer more control to your occupants, and work well with customization.
-                    <br />
-                    To check out our current client projects visit the <a href='/clients'>Clients Page</a>.
-                    <br />
-                    <span id='welcome-icon'>
-                        <span class="icon fa fa-cogs fa-lg"></span>
-                    </span>
-                    <br />
-                    If you are planning a new construction project, or want to re-vitalize an existing building, please <a href='/contact'>Contact Us</a>.
-                    <br />
-                    <span id='welcome-icon'>
-                        <span class="icon fa fa-calendar fa-lg"></span>
-                    </span>
-                    <br />
-                    To create a new work order, or follow up on an existing work order please <a href='/login'>Login to your account</a>.
-                    <br />
-                    Our ticketing system notifies us right away so you don't have to worry about leaving voicemails.
+                    <div class="row">
+                        <div class="col">
+                            <span id='welcome-icon'>
+                                <span class="icon fa fa-building fa-lg"></span>
+                            </span>
+                            <br>
+                            At Building Intellect we design, build and program your building's HVAC and overall control systems.
+                            <br>
+                            <br>
+                            We give you access to your building's systems through a convenient web interface.
+                        </div>
+                        <div class="col">
+                            <span id='welcome-icon'>
+                                <span class="icon fa fa-cogs fa-lg"></span>
+                            </span>
+                            <br>
+                            For our clients, we go the extra mile to make sure your building gives
+                            any occupants exactly what they want automatically.
+                            We also tailor our projects to offer more control to your occupants,
+                            and work well with customization.
+                            To check out current client projects visit the
+                            <br>
+                            <h4><a href='/clients'>Clients Page</a>.</h4>
+                        </div>
+                        <div class="col">
+                            <img class="fill d-block w-100" src="/img/welcome_4.png" alt="First slide">
+                        </div>
+                    </div>
+                    <div class="row row-text-break">
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            If you are planning a new construction project, or want to re-vitalize an existing building,
+                            <br>
+                            <h4>please <a href='/contact'>Contact Us</a>.</h4>
+                            <br>
+                            <span id='welcome-icon'>
+                                <span class="icon fa fa-calendar fa-lg"></span>
+                            </span>
+                        </div>
+                        <div class="col">
+                            To create a new work order, or follow up on an existing work order please
+                            <br>
+                            <h4><a href='/login'>Login to your account</a>.</h4>
+                            <br>
+                            <span id='welcome-icon'>
+                                <span class="icon fa fa-users fa-lg"></span>
+                            </span>
+                        </div>
+                        <div class="col">
+                            Our ticketing system notifies us right when you create a new Work Order
+                            so you don't have to worry about leaving voicemails.
+                            <br>
+                            <span id='welcome-icon'>
+                                <span class="icon fa fa-envelope fa-lg"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <br>
                 </div>
             </div>
         </div>
