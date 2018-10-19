@@ -13,7 +13,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    Business Inquiries Only.
+                    <div class="row">
+                        <div class="col">
+                            <img class="fill d-block w-100" src="/img/contact_phone.png" alt="phone">
+                        </div>
+                        <div class="col">
+                            <br><br><br><h4>Business<br>Inquiries<br>Only</h4>
+                        </div>
+                        <div class="col">
+                            <img class="fill d-block w-100" src="/img/contact_address.png" alt="address">
+                        </div>
+                    </div>
                     <div class="contact">
                         <form role="form " action="/contact" method="post">
                             {{ csrf_field() }}

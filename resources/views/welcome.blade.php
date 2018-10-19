@@ -112,6 +112,7 @@
                             Our ticketing system notifies us right when you create a new Work Order
                             so you don't have to worry about leaving voicemails.
                             <br>
+                            <br>
                             <span id='welcome-icon'>
                                 <span class="icon fa fa-envelope fa-lg"></span>
                             </span>

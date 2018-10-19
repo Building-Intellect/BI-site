@@ -162,6 +162,10 @@ thead, .card-header {
     margin-bottom: 16px;
 }
 
+.fill {
+    border-radius: 5px;
+}
+
 /* Welcome page styles */
 
 #welcome-icon {

@@ -35,13 +35,48 @@ body {
 }
 
 .title {
-    font-size: 64px;
+    font-size: 48px;
+    color: #dbdbdb !important;
+}
+
+.card-header {
+    background-color: #3d3d3d;
+}
+
+.card-body {
+    color: #dbdbdb;
+    background-color: #606060;
+}
+
+.card-body a {
+    color: white;
+}
+
+.card {
+    border: 0px !important;
+}
+
+.row-text-break {
+    background-color: #515151;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
 }
 
 #bi-background {
     min-height: 100vh;
     max-height: 100%;
-    background-image: linear-gradient(#e0e0e0, #ffffff);
+    background:
+        linear-gradient(45deg,
+        rgba(255,255,255,0) 48%,
+        rgba(255,255,255,.05) 50%,
+        rgba(255,255,255,0) 52%),
+        linear-gradient(-45deg,
+        rgba(255,255,255,0) 48%,
+        rgba(255,255,255,.05) 50%,
+        rgba(255,255,255,0) 52%);
+    background-size: 1em 1em;
+    background-color: #999999;
     box-shadow: inset 0 0 100px hsla(0,0%,0%,.3);
 }
 
@@ -52,7 +87,7 @@ body {
     width: 100%;
     height: 32px;
     padding-top: 5px;
-    background-color: #636b6d;
+    background-color: #515151;
     color: white;
     text-align: center;
     box-shadow: 0px 0px 15px black;
@@ -86,7 +121,7 @@ body {
     top: 0;
     z-index: 9999;
     padding: 0px;
-    background-color: #7a8388;
+    background-color: #606060;
     box-shadow: 0px 0px 15px black;
 }
 
@@ -127,15 +162,19 @@ thead, .card-header {
     margin-bottom: 16px;
 }
 
+.fill {
+    border-radius: 5px;
+}
+
 /* Welcome page styles */
 
 #welcome-icon {
     font-size: 64px;
-    color: Dodgerblue;
+    color: whitesmoke;
 }
 
 header.carousel {
-    height: 300px;
+    height: 550px;
 }
 
 header.carousel .carousel-item,
@@ -151,12 +190,19 @@ header.carousel .fill {
     background-size: cover;
 }
 
+header.carousel .carousel-caption h2 {
+    background-color:rgba(0, 0, 0, 0.3);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
 
 /* Clients page styles */
 
 #clients-icon {
     font-size: 64px;
-    color: #636b6e;
+    color: whitesmoke;
 }
 
 /* Contact page styles */
@@ -235,10 +281,20 @@ header.carousel .fill {
 
 .bi-product:hover {
     box-shadow: 0px 0px 10px gray;
-    background-color: #7c94a5;
+    background-color: #3d3d3d;
     color: white;
     transition-duration: .2s;
     cursor: pointer;
+}
+
+.bi-brand {
+    right: 10% !important;
+    left: 10% !important;
+}
+
+#accordion .btn-link {
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
 }
 
 #lightbox {
@@ -284,4 +340,19 @@ header.carousel .fill {
     text-align: center;
     color: #ffffff;
     cursor: pointer;
+}
+
+/* Work Orders page styles */
+
+a.nav-link {
+    color: white;
+}
+
+td a {
+    color: #3d3d3d !important;
+}
+
+.card-body.pl-20.pr-20, .card-body.row {
+    background-color: whitesmoke;
+    color: #3d3d3d;
 }
