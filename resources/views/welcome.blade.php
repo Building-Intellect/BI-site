@@ -58,17 +58,36 @@
 
                     <div class="row">
                         <div class="col">
+                            <br>
                             <span id='welcome-icon'>
                                 <span class="icon fa fa-building fa-lg"></span>
                             </span>
                             <br>
                             <br>
-                            At Building Intellect we design, build and program your building's HVAC and overall control systems.
+                            At Building Intellect we design, build and program your building's HVAC and master control systems.
+                        </div>
+                        <div class="col">
+                            <img class="fill d-block w-75" src="/img/logo_square.png" alt="Building Intellect">
+                        </div>
+                        <div class="col">
+                            <br>
+                            <span id='welcome-icon'>
+                                <span class="icon fa fa-desktop fa-lg"></span>
+                            </span>
                             <br>
                             <br>
                             We give you access to your building's systems through a convenient web interface.
                         </div>
+                    </div>
+                    <div class="row row-text-break">
+                        <br>
+                    </div>
+                    <div class="row">
                         <div class="col">
+                            <img class="fill d-block w-60" src="/img/welcome_4.png" alt="Satisfaction Guaranteed">
+                        </div>
+                        <div class="col">
+                            <br>
                             <span id='welcome-icon'>
                                 <span class="icon fa fa-cogs fa-lg"></span>
                             </span>
@@ -82,16 +101,14 @@
                             <br>
                             <h4><a href='/clients'>Clients Page</a>.</h4>
                         </div>
-                        <div class="col">
-                            <img class="fill d-block w-100" src="/img/welcome_4.png" alt="First slide">
-                        </div>
                     </div>
                     <div class="row row-text-break">
                         <br>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col">
-                            If you are planning a new construction project, or want to re-vitalize an existing building,
+                            If you are planning a new construction project, or want to retrofit an existing building,
                             <br>
                             <h4>please <a href='/contact'>Contact Us</a>.</h4>
                             <br>

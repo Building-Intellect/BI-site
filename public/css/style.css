@@ -164,6 +164,8 @@ thead, .card-header {
 
 .fill {
     border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Welcome page styles */
