@@ -25,10 +25,6 @@ return [
         'region' => env('SES_REGION', 'us-east-1'),
     ],
 
-    'sparkpost' => [
-        'secret' => '2a4374ec25e4b30fb9332800a7e835ec73c5a997',
-    ],
-
     'stripe' => [
         'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
