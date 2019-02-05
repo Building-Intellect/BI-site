@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtpout.secureserver.net'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => 'noreply@buildingintellect.com',
-        'name' => 'Building Intellect',
+        'address' => env('MAIL_FROM_ADDRESS', 'noreply@buildingintellect.com'),
+        'name' => 'Building Intellect Work Orders',
     ],
 
     /*

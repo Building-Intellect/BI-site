@@ -21,15 +21,16 @@ class ContactController extends Controller
             'g-recaptcha-response' => 'required|captcha'
         ]);
 
-        $emailBody = '<h1>New Site Contact Message:</h1>'
+        $emailBody = '<h1>New Building Intellect Contact Message:</h1>'
             . '<h3>Name: '. $request->name . ' </h3>'
             . '<h3>Email Address: '. $request->email . ' </h3>'
+            . '<h3>Subject: '. $request->subject . ' </h3>'
             . '<hr />'
-            . '<p>Name: '. $request->msg . ' </h3>';
+            . '<p>Message: '. $request->msg . ' </h3>';
 
-        sendEmail(
-            'sales@buildingintellect.com',
-            'Site Contact: ' . $request->subject,
+        $this->sendEmail(
+            'chikn42@gmail.com',
+            'Building Intellect Contact: ' . $request->subject,
             $emailBody,
             $request->name
         );
@@ -39,20 +40,16 @@ class ContactController extends Controller
 
     // send email using phpmailer and godaddy smtp forwarding
     function sendEmail($to, $subject, $message, $name) {
-        define('SMTP_HOST', 'relay-hosting.secureserver.net');
-        define('SMTP_PORT', 25);
-        define('SMTP_AUTH', true);
-
         $mail = new PHPMailer(true);
         $mail->IsSMTP();
-        $mail -> SMTPDebug = 1;
-        $mail->Host = "smtpout.secureserver.net";
-        $mail->SMTPAuth = SMTP_AUTH;
-        $mail->Port = 80;
-        $mail->Username = "kellann@buildingintellect.com";
-        $mail->Password = "890p890p";
-        //$mail->SMTPSecure = 'ssl';
-        $mail->SetFrom('noreply@buildingintellect.com');
+        $mail->SMTPDebug = 1;
+        $mail->Host = env('MAIL_HOST');
+        $mail->SMTPAuth = env('MAIL_SMTP_AUTH');
+        $mail->Port = env('MAIL_PORT');
+        $mail->Username = env('MAIL_USERNAME');
+        $mail->Password = env('MAIL_PASSWORD');
+        $mail->SMTPSecure = env('MAIL_ENCRYPTION');
+        $mail->SetFrom(env('MAIL_FROM_ADDRESS'));
         $mail->Subject = $subject;
         $body = $message;
         $mail->AltBody = "To view the message, please use an HTML compatible email viewer!";

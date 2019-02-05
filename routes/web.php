@@ -51,13 +51,13 @@ Route::get('/seed-work-orders', function () {
     $work_orders_seeder->email_domain = '@example.com'; // the email domain name for demo accounts. Ex. user1@example.com
     $work_orders_seeder->agents_qty = 4; // number of demo agents accounts
     $work_orders_seeder->agents_per_category = 1; // number of demo agents per category (must be lower than $agents_qty)
-    $work_orders_seeder->users_qty = 10; // number of demo users accounts
+    $work_orders_seeder->users_qty = 4; // number of demo users accounts
     $work_orders_seeder->tickets_per_user_min = 1; // Minimum number of generated tickets per user
     $work_orders_seeder->tickets_per_user_max = 5; // Maximum number of generated tickets per user
     $work_orders_seeder->comments_per_ticket_min = 0; // Minimum number of generated comments per ticket
     $work_orders_seeder->comments_per_ticket_max = 3; // Maximum number of generated comments per ticket
-    $work_orders_seeder->default_agent_password = 'demo'; // default demo agents accounts paasword
-    $work_orders_seeder->default_user_password = 'demo'; // default demo users accounts paasword
+    $work_orders_seeder->default_agent_password = 'password'; // default demo agents accounts paasword
+    $work_orders_seeder->default_user_password = 'password'; // default demo users accounts paasword
     $work_orders_seeder->tickets_date_period = 70; // to go to past (in days) and start creating tickets since
     $work_orders_seeder->tickets_min_close_period = 1; // minimum days to close tickets
     $work_orders_seeder->tickets_max_close_period = 365; // maximum days to close tickets
