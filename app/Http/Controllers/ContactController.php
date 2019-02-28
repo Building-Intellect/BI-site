@@ -29,7 +29,7 @@ class ContactController extends Controller
             . '<p>Message: '. $request->msg . ' </h3>';
 
         $this->sendEmail(
-            'chikn42@gmail.com',
+            'accounting@buildingintellect.com',
             'Building Intellect Contact: ' . $request->subject,
             $emailBody,
             $request->name
